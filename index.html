@@ -4,12 +4,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Survey Form</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+<h1 id="title">Customer Survey Form</h1>
+<p id="description"><em>We would like to know more about your experience</em></p>
 
+<form id="survey-form">
+  <fieldSet>
+    <legend>Personal Information</legend>
+    <label id="name-label" for="name">
+      Name
+      <input type="text" id="name" name="name" placeholder="Enter your name"/>
+    </label>
+    <label id="email-label" for="email">
+      Email
+      <input type="email" id="email" name="email" placeholder="Enter your Email"/>
+    </label>
+    <label id="number-label" for="number">
+      Age <span>(optional)</span>
+      <input type="number" id="number" min="18" max="150" name="number" placeholder="Age"/>
+    </label>
+    <label for="dropdown">
+      <select name="dropdown" id="dropdown">
+        <option disabled selected>Select current role</option>
+        <option>Student</option>
+        <option>Full Time Job</option>
+        <option>Full Time Learner</option>
+        <option>Prefer not to say</option>
+        <option>Other</option>
+      </select>
+    </label>
+  </fieldSet>
+  <fieldSet>
+    <legend>Survey Questions</legend>
+    <p>Would you recommend this product to a friend?</p>
+    <label for="would">
+      <input type="radio" id="would" name="radio" checked/>
+      Definitely
+    </label>
+    <label for="maybe">
+      <input type="radio" id="maybe" name="radio"/>
+      Maybe
+    </label>
+    <label for="not">
+      <input type="radio" id="not" name="radio"/>
+      Not sure
+    </label>
+    <p>What is your favorite feature of the product?</p>
+    <label>
+      <select required>
+        <option disabled selected>Select an option</option>
+        <option>Functionality</option>
+        <option>Price</option>
+        <option>Color</option>
+        <option>Durability</option>
+      </select>
+    </label>
+    <p>What would you like to see improved? <span>(Check all that apply)</span></p>
+    <label>
+      <input type="checkbox" value="Delivery"/> Delivery time
+    </label>
+    <label>
+      <input type="checkbox" value="Shipping"/> Shipping cost
+    </label>
+    <label>
+      <input type="checkbox" value="Color"/> Color
+    </label>
+    <label>
+      <input type="checkbox" value="Material"/> Material
+    </label>
+    <label>
+      Any comments or suggestions?
+      <textarea rows="4" cols="50" placeholder="Enter your comment here...">
+      </textarea>
+    </label>
+  </fieldSet>
+  <input id="submit" type="submit" value="Submit"/>
+</form>
 </body>
-
 </html>
