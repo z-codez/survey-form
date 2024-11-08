@@ -9,25 +9,28 @@
 </head>
 
 <body>
-<h1 id="title">Customer Survey Form</h1>
-<p id="description"><em>We would like to know more about your experience</em></p>
+  <header>
+    <h1 id="title">Customer Survey Form</h1>
+    <p id="description"><em>We would like to know more about your experience</em></p>
+  </header>
 
-<form id="survey-form">
-  <fieldSet>
+  <form id="survey-form">
+  <fieldset>
     <legend>Personal Information</legend>
     <label id="name-label" for="name">
       Name
-      <input type="text" id="name" name="name" placeholder="Enter your name"/>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required/>
     </label>
     <label id="email-label" for="email">
       Email
-      <input type="email" id="email" name="email" placeholder="Enter your Email"/>
+      <input type="email" id="email" name="email" placeholder="Enter your Email" required/>
     </label>
     <label id="number-label" for="number">
       Age <span>(optional)</span>
       <input type="number" id="number" min="18" max="150" name="number" placeholder="Age"/>
     </label>
     <label for="dropdown">
+      Which option best describes your current role?
       <select name="dropdown" id="dropdown">
         <option disabled selected>Select current role</option>
         <option>Student</option>
@@ -37,8 +40,8 @@
         <option>Other</option>
       </select>
     </label>
-  </fieldSet>
-  <fieldSet>
+  </fieldset>
+  <fieldset>
     <legend>Survey Questions</legend>
     <p>Would you recommend this product to a friend?</p>
     <label for="would">
@@ -78,11 +81,10 @@
     </label>
     <label>
       Any comments or suggestions?
-      <textarea rows="4" cols="50" placeholder="Enter your comment here...">
-      </textarea>
+      <textarea rows="4" cols="50" placeholder="Enter your comment here..."></textarea>
     </label>
-  </fieldSet>
+  </fieldset>
   <input id="submit" type="submit" value="Submit"/>
-</form>
+  </form>
 </body>
 </html>
