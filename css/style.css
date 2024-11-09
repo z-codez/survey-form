@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: #17191A;
@@ -32,22 +35,46 @@ fieldset legend {
   text-align: center;
 }
 
-label {
+label, form p {
   display: block;
   margin-bottom: 10px;
   margin-right: auto;
   margin-left: auto;
   max-width: 500px;
 }
-
-input,
+fieldset:first-of-type input,
 select,
-textarea {
+textarea{
   width: 100%;
   background-color: #3B3B3B;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
+
+
+/*select,*/
+/*textarea {*/
+/*  width: 100%;*/
+/*  background-color: #3B3B3B;*/
+/*}*/
 
 input[type="submit"] {
   background-color: mediumseagreen;
   padding: 10px;
+  display: block;
+  max-width: 500px;
+  width: 93%;
+  margin: auto;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+
+}
+
+/*This helps to vertically center the radio buttons*/
+input[type="radio"] {
+  margin-top: -1px;
 }

@@ -14,7 +14,7 @@
     <p id="description"><em>We would like to know more about your experience</em></p>
   </header>
 
-  <form id="survey-form">
+  <form id="survey-form" action="#" method="post">
   <fieldset>
     <legend>Personal Information</legend>
     <label id="name-label" for="name">
@@ -27,7 +27,7 @@
     </label>
     <label id="number-label" for="number">
       Age <span>(optional)</span>
-      <input type="number" id="number" min="18" max="150" name="number" placeholder="Age"/>
+      <input type="number" id="number" min="18" max="150" name="number" placeholder="Age" required/>
     </label>
     <label for="dropdown">
       Which option best describes your current role?
@@ -56,8 +56,8 @@
       <input type="radio" id="not" name="radio"/>
       Not sure
     </label>
-    <p>What is your favorite feature of the product?</p>
     <label>
+      What is your favorite feature of the product?
       <select required>
         <option disabled selected>Select an option</option>
         <option>Functionality</option>
